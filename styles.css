@@ -869,12 +869,28 @@ body {
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 20px 0;
-  text-align: center;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .footer-bottom p {
   font-size: 0.85rem;
   color: var(--gray);
+}
+
+.visitor-count {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  color: var(--primary-light) !important;
+  font-weight: 600;
 }
 
 /* ===== CART PANEL ===== */

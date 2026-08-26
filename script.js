@@ -333,3 +333,16 @@ document.getElementById("uploadRx").addEventListener("click", () => {
 });
 
 renderProducts();
+
+// Visitor Counter (localStorage based - per browser)
+function updateVisitorCounter() {
+  let count = localStorage.getItem('medicare_visitors');
+  if (!count) {
+    count = 1;
+  } else {
+    count = parseInt(count) + 1;
+  }
+  localStorage.setItem('medicare_visitors', count);
+  document.getElementById('visitorCount').textContent = count;
+}
+updateVisitorCounter();
