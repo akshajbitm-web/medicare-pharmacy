@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediCare Pharmacy - Your Health, Our Priority</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">&#9764;</span>
+        <span class="logo-text">Medi<span class="accent">Care</span></span>
+      </a>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search medicines..."/>
+          <button id="searchBtn">&#128269;</button>
+        </div>
+        <button class="cart-btn" id="cartBtn">
+          &#128722;
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Your Trusted<br/><span class="accent">Online Pharmacy</span></h1>
+        <p>Get genuine medicines delivered to your doorstep. Licensed pharmacists, verified products, and fast delivery across the city.</p>
+        <div class="hero-btns">
+          <a href="#products" class="btn btn-primary">Shop Now</a>
+          <a href="#about" class="btn btn-outline">Learn More</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>10K+</strong><span>Happy Customers</span></div>
+          <div class="stat"><strong>5000+</strong><span>Products</span></div>
+          <div class="stat"><strong>24/7</strong><span>Support</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card card-1">&#128138; Prescriptions</div>
+        <div class="hero-card card-2">&#128154; Wellness</div>
+        <div class="hero-card card-3">&#9889; Fast Delivery</div>
+        <div class="pill pill-1"></div>
+        <div class="pill pill-2"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-bar">
+    <div class="container features-grid">
+      <div class="feature">
+        <div class="feature-icon">&#128666;</div>
+        <h3>Free Delivery</h3>
+        <p>On orders above Rs.500</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">&#128737;</div>
+        <h3>100% Genuine</h3>
+        <p>Verified medicines only</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">&#128176;</div>
+        <h3>Best Prices</h3>
+        <p>Up to 25% off on MRP</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">&#128222;</div>
+        <h3>Expert Advice</h3>
+        <p>Licensed pharmacists</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="categories" id="categories">
+    <div class="container">
+      <h2 class="section-title">Browse Categories</h2>
+      <p class="section-subtitle">Find what you need across our wide range of health products</p>
+      <div class="cat-grid">
+        <div class="cat-card" data-category="prescription">
+          <div class="cat-icon">&#128203;</div>
+          <h3>Prescription Drugs</h3>
+          <p>Upload your prescription and get medicines delivered</p>
+        </div>
+        <div class="cat-card" data-category="wellness">
+          <div class="cat-icon">&#127811;</div>
+          <h3>Wellness & Supplements</h3>
+          <p>Vitamins, minerals and nutritional supplements</p>
+        </div>
+        <div class="cat-card" data-category="personal-care">
+          <div class="cat-icon">&#128132;</div>
+          <h3>Personal Care</h3>
+          <p>Skin care, hair care and hygiene products</p>
+        </div>
+        <div class="cat-card" data-category="devices">
+          <div class="cat-icon">&#129657;</div>
+          <h3>Medical Devices</h3>
+          <p>BP monitors, glucometers and more</p>
+        </div>
+        <div class="cat-card" data-category="otc">
+          <div class="cat-icon">&#128138;</div>
+          <h3>OTC Medicines</h3>
+          <p>Over-the-counter drugs for common ailments</p>
+        </div>
+        <div class="cat-card" data-category="baby-care">
+          <div class="cat-icon">&#128118;</div>
+          <h3>Baby Care</h3>
+          <p>Infant formula, diapers and baby essentials</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="products" id="products">
+    <div class="container">
+      <h2 class="section-title">Featured Products</h2>
+      <p class="section-subtitle">Top-selling medicines and health products</p>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="wellness">Wellness</button>
+        <button class="filter-btn" data-filter="otc">OTC</button>
+        <button class="filter-btn" data-filter="personal-care">Personal Care</button>
+        <button class="filter-btn" data-filter="devices">Devices</button>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <section class="prescription-banner">
+    <div class="container prescription-inner">
+      <div class="presc-text">
+        <h2>Have a Prescription?</h2>
+        <p>Upload your prescription and our licensed pharmacists will verify and deliver your medicines safely.</p>
+        <button class="btn btn-primary" id="uploadRx">Upload Prescription</button>
+      </div>
+      <div class="presc-visual">
+        <div class="presc-card">
+          <div class="presc-line"></div>
+          <div class="presc-line short"></div>
+          <div class="presc-line"></div>
+          <div class="presc-stamp">Verified</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about-inner">
+      <div class="about-visual">
+        <div class="about-card">
+          <div class="about-stat"><strong>15+</strong><span>Years of Service</span></div>
+          <div class="about-stat"><strong>50+</strong><span>Certified Pharmacists</span></div>
+          <div class="about-stat"><strong>1L+</strong><span>Orders Delivered</span></div>
+        </div>
+      </div>
+      <div class="about-text">
+        <h2 class="section-title">About MediCare</h2>
+        <p>MediCare Pharmacy has been serving the community for over 15 years. We are committed to providing genuine, affordable medicines with the convenience of online ordering and home delivery.</p>
+        <p>Our team of licensed pharmacists ensures every order is verified and dispensed with care. We partner directly with leading pharmaceutical manufacturers to guarantee product authenticity.</p>
+        <div class="about-checks">
+          <div class="check-item">&#10003; CDSCO Licensed</div>
+          <div class="check-item">&#10003; WHO-GMP Certified Suppliers</div>
+          <div class="check-item">&#10003; Temperature-Controlled Storage</div>
+          <div class="check-item">&#10003; Order Tracking Available</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">What Our Customers Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Quick delivery and genuine products. The pharmacist even called to confirm my prescription. Highly recommended!"</p>
+          <div class="testimonial-author">- Priya S.</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Best prices I've found online. The 25% discount on MRP really helps with monthly medicine expenses."</p>
+          <div class="testimonial-author">- Rahul M.</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+          <p>"Very convenient platform. I ordered at night and it was delivered by morning. Great service!"</p>
+          <div class="testimonial-author">- Anita K.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container contact-inner">
+      <div class="contact-info">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-item">
+          <span class="contact-icon">&#128205;</span>
+          <div><strong>Address</strong><p>123 Health Avenue, Medical District, Mumbai 400001</p></div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">&#128222;</span>
+          <div><strong>Phone</strong><p>+91 98765 43210</p></div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">&#128231;</span>
+          <div><strong>Email</strong><p>support@medicare pharmacy.com</p></div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">&#128336;</span>
+          <div><strong>Hours</strong><p>Mon - Sat: 8:00 AM - 10:00 PM<br/>Sun: 9:00 AM - 6:00 PM</p></div>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Your Name" required/>
+        <input type="email" placeholder="Your Email" required/>
+        <input type="tel" placeholder="Phone Number"/>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3><span class="logo-icon">&#9764;</span> MediCare</h3>
+        <p>Your trusted online pharmacy. Genuine medicines, expert advice, and fast delivery.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="#">Prescription Drugs</a>
+        <a href="#">Wellness & Supplements</a>
+        <a href="#">Personal Care</a>
+        <a href="#">Medical Devices</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Return Policy</a>
+        <a href="#">Drug Information</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 MediCare Pharmacy. All rights reserved. License No: PHA/2026/12345</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay">
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="cart-close" id="cartClose">&times;</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <p class="cart-empty">Your cart is empty</p>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span id="cartTotal">Rs.0</span>
+        </div>
+        <button class="btn btn-primary btn-full" id="checkoutBtn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Item added to cart!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
